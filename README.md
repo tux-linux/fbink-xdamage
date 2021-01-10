@@ -1,5 +1,6 @@
 # fbink-xdamage
 A xclient that listens for xdamage events and refreshes EPD using FBInk
+
 See here for a How-To for Kobos: https://www.mobileread.com/forums/showthread.php?t=336210
 
 ## Getting started
