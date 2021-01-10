@@ -23,13 +23,8 @@ make
 ```
 
 4. Run:
-
-First, in another shell, stop the running Kindle GUI including X, which also includes awesome windowmanager that usually caters for EPD refreshes. Then start X without any windowmanager:
-```
-stop lab126_gui
-stop x
-X
-```
+Start an X session:
+```X &```
 Then in the shell you compiled fbink-xdamage in start it as root. If you are a user currently, you can run the command like ```sudo su -c "command below"```:
 ```
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/path/to/fbink-xdamage/FBInk/Release/; env DISPLAY=:0 ./fbink_xdamage
