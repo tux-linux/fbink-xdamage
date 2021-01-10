@@ -2,7 +2,7 @@
 A xclient that listens for xdamage events and refreshes EPD using FBInk
 
 ## Getting started
-1. Clone repository including submodules on a Kindle: 
+1. Clone repository including submodules on a Kobo: 
 
 ```
 git clone --recurse-submodules https://github.com/tux-linux/fbink-xdamage
