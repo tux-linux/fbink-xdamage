@@ -101,7 +101,7 @@ void refresh(unsigned int refresh_mode, myrect_t area)
         
     }
     printf("DOING fbink_refresh: %i %i %i %i\n", area.y, area.x, area.width, area.height);
-    fbink_refresh(fbfd, area.y, area.x, area.width, area.height, HWD_ORDERED, &fbink_cfg);
+    fbink_refresh(fbfd, area.y, area.x, area.width, area.height, &fbink_cfg);
     
 }
 
@@ -240,7 +240,7 @@ int main(int argc, char *argv[])
 		rv = ERRCODE(EXIT_FAILURE);
 		goto cleanup;
 	}
-    fbink_refresh(fbfd, 0,0,0,0, HWD_ORDERED, &fbink_cfg);                 
+    fbink_refresh(fbfd, 0,0,0,0, &fbink_cfg);                 
     while (1)
     {
         if( XPending(display) ) {
@@ -265,7 +265,7 @@ int main(int argc, char *argv[])
                     area.width = rect.width;
                     area.height = rect.height;
                     handleDamagedArea(area);
-                    //fbink_refresh(fbfd, rect.y, rect.x, rect.width, rect.height, HWD_ORDERED, &fbink_cfg);                 
+                    //fbink_refresh(fbfd, rect.y, rect.x, rect.width, rect.height, &fbink_cfg);                 
                 }
                 XFree(area);
             }
